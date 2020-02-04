@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//Write function prototype here
+int gcd(int,int);
 
 int main(){
 	cout << gcd(25,15) << "\n";
@@ -16,8 +16,11 @@ int main(){
 }
 
 //Write function definition here
-/*
-??? gcd(???){
-
+int gcd(int x,int y){
+	if (x%y==0){
+		return y;
+	}else if (x%y!=0){
+		return gcd(y,x%y);	
+	}
 }
-*/
+
